@@ -23,7 +23,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app/
-RUN chown 1000:1000 /app
+RUN chown 1000:1000 /app /tmp
 USER 1000
 ENV HOME /tmp
 
