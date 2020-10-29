@@ -1,30 +1,36 @@
-FROM ubuntu:20.04
+FROM 1and1internet/php-build-environment:base
 MAINTAINER developmentteamserenity@fasthosts.com
 
-ENV DEBIAN_FRONTEND noninteractive
+USER root
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-      curl \
-      git \
-      jq \
-      mysql-client \
-      nano \
-      software-properties-common \
-      tzdata \
-      unzip \
-      vim \
-      telnet \
-    && apt-get autoremove --purge -y \
-    && add-apt-repository -y ppa:ondrej/php \
-    && apt-get purge -y \
-      software-properties-common \
+      php8.0-bcmath \
+      php8.0-bz2 \
+      php8.0-cli \
+      php8.0-curl \
+      php8.0-gd \
+      php8.0-gmp \
+      php8.0-imap \
+      php8.0-intl \
+      php8.0-ldap \
+      php8.0-mbstring \
+      php8.0-mysql \
+      php8.0-memcached \
+      php8.0-odbc \
+      php8.0-opcache \
+      php8.0-pgsql \
+      php8.0-readlin \
+      php8.0-redis \
+      php8.0-sqlite3 \
+      php8.0-xml \
+      php8.0-xsl \
+      php8.0-zip \
     && apt-get autoremove --purge -y \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app/
-RUN chown 1000:1000 /app /tmp
 USER 1000
-ENV HOME /tmp
 
-COPY --chown=1000:1000 --from=composer:latest /usr/bin/composer /usr/bin/composer
+ENV PATH $PATH:/tmp/.composer/vendor/bin
+
+RUN composer global require psy/psysh && composer clear-cache
