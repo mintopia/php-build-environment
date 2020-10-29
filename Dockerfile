@@ -34,5 +34,5 @@ USER 1000
 
 ENV PATH $PATH:/tmp/.composer/vendor/bin
 
-RUN composer global require hirak/prestissimo psy/psysh && composer clear-cache
+RUN composer global require psy/psysh && composer clear-cache
 
