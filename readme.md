@@ -1,6 +1,6 @@
 # PHP 7.4 Build Environment
 
-This image contains a light image based on ubuntu 18.04 LTS and includes the latest PHP 7.4 CLI binaries from the [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php) PPA. It is built on top of [1and1internet/php-build-environment-base](https://cloud.docker.com/u/1and1internet/repository/docker/1and1internet/php-build-environment-base).
+This image contains a light image based on ubuntu 20.04 LTS and includes the latest PHP 7.4 CLI binaries from the [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php) PPA. It is built on top of [1and1internet/php-build-environment-base](https://cloud.docker.com/u/1and1internet/repository/docker/1and1internet/php-build-environment-base).
 
 It has the following extensions installed:
 
@@ -39,7 +39,7 @@ It also includes a couple of text editors for convenience:
 1. Nano
 1. Vim
 
-Lastly, it also has the [prestissimo composer plugin](https://github.com/hirak/prestissimo), which allows parallel installs during composer installs and updates. and the latest stable release of [PsySH](https://psysh.org/) - a PHP REPL that's useful for debugging.
+Lastly, it also has the latest stable release of [PsySH](https://psysh.org/) - a PHP REPL that's useful for debugging.
 
 The parent image is rebuilt nightly, and this image tracks changes in it. So this image should usually contain the latest fixes and updates.
 
