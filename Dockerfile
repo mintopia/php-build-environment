@@ -5,6 +5,7 @@ USER root
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+      php8.0-amqp \
       php8.0-bcmath \
       php8.0-bz2 \
       php8.0-cli \
@@ -15,8 +16,8 @@ RUN apt-get update \
       php8.0-intl \
       php8.0-ldap \
       php8.0-mbstring \
-      php8.0-mysql \
       php8.0-memcached \
+      php8.0-mysql \
       php8.0-odbc \
       php8.0-opcache \
       php8.0-pgsql \
