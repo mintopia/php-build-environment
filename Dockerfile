@@ -1,30 +1,32 @@
-FROM ubuntu:20.04
+FROM 1and1internet/php-build-environment:base
 MAINTAINER developmentteamserenity@fasthosts.com
 
-ENV DEBIAN_FRONTEND noninteractive
+USER root
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-      curl \
-      git \
-      jq \
-      mysql-client \
-      nano \
-      software-properties-common \
-      tzdata \
-      unzip \
-      vim \
-      telnet \
-    && apt-get autoremove --purge -y \
-    && add-apt-repository -y ppa:ondrej/php \
-    && apt-get purge -y \
-      software-properties-common \
+      php7.0-bcmath \
+      php7.0-bz2 \
+      php7.0-cli \
+      php7.0-curl \
+      php7.0-gd \
+      php7.0-intl \
+      php7.0-json \
+      php7.0-ldap \
+      php7.0-mbstring \
+      php7.0-mysql \
+      php7.0-opcache \
+      php7.0-readline \
+      php7.0-sqlite3 \
+      php7.0-xml \
+      php7.0-zip \
+      php7.0-amqp \
+      php7.0-redis \
     && apt-get autoremove --purge -y \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app/
-RUN chown 1000:1000 /app /tmp
 USER 1000
-ENV HOME /tmp
 
-COPY --chown=1000:1000 --from=composer:latest /usr/bin/composer /usr/bin/composer
+ENV PATH $PATH:/tmp/.composer/vendor/bin
+
+RUN composer global require psy/psysh && composer clear-cache
