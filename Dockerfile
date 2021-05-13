@@ -25,8 +25,8 @@ RUN apt-get update \
       php7.4-xml \
       php7.4-xsl \
       php7.4-zip \
-      php-amqp \
-      php-redis \
+      php7.4-amqp \
+      php7.4-redis \
     && apt-get autoremove --purge -y \
     && rm -rf /var/lib/apt/lists/*
 
