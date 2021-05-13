@@ -20,8 +20,8 @@ RUN apt-get update \
       php7.2-sqlite3 \
       php7.2-xml \
       php7.2-zip \
-      php-amqp \
-      php-redis \
+      php7.2-amqp \
+      php7.2-redis \
     && apt-get autoremove --purge -y \
     && rm -rf /var/lib/apt/lists/*
 
