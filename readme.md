@@ -10,7 +10,7 @@ It has the following extensions installed:
 1. GD
 1. GMP
 1. IMAP
-1. internationalisation
+1. Internationalisation
 1. JSON
 1. LDAP
 1. MBString
