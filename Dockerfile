@@ -22,6 +22,7 @@ RUN apt-get update \
       php7.4-pgsql \
       php7.4-readline \
       php7.4-sqlite3 \
+      php7.4-xdebug \
       php7.4-xml \
       php7.4-xsl \
       php7.4-zip \
