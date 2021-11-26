@@ -8,7 +8,7 @@ It has the following PHP extensions installed:
 1. BCMath
 1. Curl
 1. GD
-1. internationalisation
+1. Internationalisation
 1. JSON
 1. LDAP
 1. MBString
