@@ -1,4 +1,4 @@
-# PHP 7.0 Build Environment
+# PHP 7.0 Build Environment with XDebug
 
 This image contains a light image based on ubuntu 20.04 LTS and includes the latest PHP 7.0 CLI binaries from the [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php) PPA. It is built on top of [1and1internet/php-build-environment-base](https://cloud.docker.com/u/1and1internet/repository/docker/1and1internet/php-build-environment-base).
 
@@ -17,6 +17,7 @@ It has the following PHP extensions installed:
 1. Readline
 1. Redis
 1. Sqlite 3
+1. XDebug
 1. XML
 1. Zip
 
