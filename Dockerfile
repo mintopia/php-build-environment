@@ -5,6 +5,7 @@ USER root
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+      php8.1-amqp \
       php8.1-bcmath \
       php8.1-bz2 \
       php8.1-cli \
@@ -20,6 +21,7 @@ RUN apt-get update \
       php8.1-opcache \
       php8.1-pgsql \
       php8.1-readline \
+      php8.1-redis \
       php8.1-sqlite3 \
       php8.1-xml \
       php8.1-xsl \
