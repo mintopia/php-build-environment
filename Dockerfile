@@ -27,6 +27,8 @@ RUN apt-get update \
 
 USER 1000
 
+COPY --chown=1000:1000 --from=composer:2.2 /usr/bin/composer /usr/bin/composer
+
 ENV PATH $PATH:/tmp/.composer/vendor/bin
 
 RUN composer global require psy/psysh && composer clear-cache
