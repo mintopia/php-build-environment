@@ -26,5 +26,3 @@ WORKDIR /app/
 RUN chown 1000:1000 /app /tmp
 USER 1000
 ENV HOME /tmp
-
-COPY --chown=1000:1000 --from=composer:latest /usr/bin/composer /usr/bin/composer
