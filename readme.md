@@ -18,6 +18,7 @@ It has the following PHP extensions installed:
 1. Redis
 1. Sqlite 3
 1. XML
+1. XML-RPC
 1. Zip
 
 It also includes common tools used to build and run PHP applications:

@@ -19,6 +19,7 @@ RUN apt-get update \
       php7.2-readline \
       php7.2-sqlite3 \
       php7.2-xml \
+      php7.2-xmlrpc \
       php7.2-zip \
       php7.2-amqp \
       php7.2-redis \
