@@ -22,6 +22,7 @@ It has the following extensions installed:
 1. Redis
 1. Sqlite 3
 1. XML
+1. XML-RPC
 1. XSL
 1. Zip
 
