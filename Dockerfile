@@ -25,6 +25,7 @@ RUN apt-get update \
       php8.0-redis \
       php8.0-sqlite3 \
       php8.0-xml \
+      php8.0-xmlrpc \
       php8.0-xsl \
       php8.0-zip \
     && apt-get autoremove --purge -y \
