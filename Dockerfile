@@ -1,10 +1,12 @@
-FROM ubuntu:20.04
-MAINTAINER developmentteamserenity@fasthosts.com
+FROM ubuntu:22.04
+
+LABEL org.opencontainers.image.authors="developmentteamserenity@fasthosts.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+      gpg-agent \
       curl \
       git \
       jq \
@@ -19,6 +21,7 @@ RUN apt-get update \
     && add-apt-repository -y ppa:ondrej/php \
     && apt-get purge -y \
       software-properties-common \
+      gpg-agent \
     && apt-get autoremove --purge -y \
     && rm -rf /var/lib/apt/lists/*
 
