@@ -1,6 +1,6 @@
 # PHP Build Environment Base
 
-This image contains a light image based on ubuntu 18.04 LTS. It also has the [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php) PPA added to allow installation of the latest versions of PHP 7.x
+This image contains a light image based on ubuntu 22.04 LTS. It also has the [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php) PPA added to allow installation of the latest versions of PHP 7.x
 
 It also includes common tools used to build and run PHP applications:
 
