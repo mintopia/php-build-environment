@@ -33,7 +33,7 @@ RUN apt-get update \
 
 USER 1000
 
-COPY --chown=1000:1000 --from=composer:2.3 /usr/bin/composer /usr/bin/composer
+COPY --chown=1000:1000 --from=composer:2.4 /usr/bin/composer /usr/bin/composer
 
 ENV PATH $PATH:/tmp/.composer/vendor/bin
 
